@@ -76,7 +76,7 @@ function Dashboard() {
     API.get("/challenges/progress")
       .then((res) => setChallengeProgress(res.data.data))
       .catch(console.log);
-  }, []);
+  }, [navigate]);
 
   const levelTitle = (level) => {
     if (level >= 20) return "Grandmaster";
